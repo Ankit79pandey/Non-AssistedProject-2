@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class EmailValidation {
 
 	public static void main(String args[]) {
-		
+		int count=0;
 		String[] arr=new String[5];
 		arr[0]="Ankit1108@gmail.com";
 		arr[1]="Rahul@gmail.com";
@@ -13,16 +13,18 @@ public class EmailValidation {
 	
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter you emailId: ");
-		String Email=sc.next();
+		String Email=sc.nextLine();
 		for(int i=0;i<=4;i++) {
 		
 			if(arr[i].equals(Email)) {
-			
-				System.out.println("Congratulations,you passed the email validation");
+			  count=1;
 			}
-			else {
-				System.out.println("Sorry😓,You have entered wrong email");
-			break;}
+			
 		}
+		if(count==1) {
+			System.out.println("Congratulations,you passed the validation test🙂");
+		}
+		else
+			System.out.println("Sorry,wrong emailId ☹ !!");
 	}
 }
